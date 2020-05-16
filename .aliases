@@ -1,0 +1,75 @@
+#!/bin/bash
+# version: 0.1
+# author: kahn.ke
+
+
+alias sudo="sudo "
+alias watch="watch "
+
+alias df="df -h"
+alias du="du -h"
+alias diff='colordiff'
+alias du0="du -h --max-depth=0"
+alias du1="du -h --max-depth=1"
+alias bc='bc -l'
+
+# chdir
+alias ..="cd .."
+alias cdd="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -='cd -'
+
+# list
+alias ll='ls -l'
+alias lx='ls -lhBX'			# sort by extension
+alias lz='ls -lhrS'			# sort by size
+alias lt='ls -lhrt'			# sort by date
+alias lsd='find . -maxdepth 1 -type d | sort'	# list all dir
+
+alias psg='ps aux|grep'
+alias dfind='find . -type d -name'
+alias ffind='find . -type f -name'
+
+# get myip
+alias myip='curl ipinfo.io/ip'
+
+# open vscode
+alias c='code .'
+
+# brew
+alias appinstall='brew install '
+alias appupdate='brew update && brew upgrade'
+alias appuninstall='brew uninstall '
+
+# git difftoll .
+alias gd.='git difftool .'
+
+# git-open
+alias gopen='git-open'
+
+# Beyond Compare
+alias df='bcomp'
+
+# git checkout
+alias gcof='git checkout $(git branch -r | fzf)'
+
+# proxy
+alias proxy='export https_proxy=http://192.168.2.1:7890 http_proxy=http://192.168.2.1:7890 all_proxy=socks5://192.168.2.1:7891'
+alias unproxy='unset all_proxy'
+
+# WebStorm
+alias ws="webstorm"
+
+# GoLand
+alias gol="goland"
+
+# bat
+if command -v bat &>/dev/null; then
+	alias cat=bat
+fi
+
+today() {
+	date "+%Y-%m-%d"
+}
